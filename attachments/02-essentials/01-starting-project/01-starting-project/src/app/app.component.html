@@ -1,0 +1,17 @@
+<app-header/>
+
+<main>
+    <ul id="users">
+        @for (user of users; track user.id){  <!-- Track lleva un seguimiento de los elementos que han cambiado para no crear todo el bucle de nuevo al actualizar la lista -->
+            <li>
+                <app-user [user]="user" (select)="onSelectUser($event)" />
+            </li>
+        }
+    </ul>
+
+    @if (selectedUser) {
+        <app-tasks [name]="selectedUser.name"/>
+    } @else {
+        <p id="fallback">Select a user to see their tasks!</p>
+    }
+</main>
