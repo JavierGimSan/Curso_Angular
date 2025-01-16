@@ -19,11 +19,11 @@ export class InvestmentResultsComponent {
   // }>() Tanto aquí como abajo hay que indicar el tipo de dato que se pasa.
 
   @Input() results?:{ //El interrogante indica que el 'value' de 'results' puede ser undefined
-    year: number,
-    interest: number,
-    valueEndOfYear: number,
-    annualInvestment: number,
-    totalInterest: number,
+    year: number;
+    interest: number;
+    valueEndOfYear: number;
+    annualInvestment: number;
+    totalInterest: number;
     totalAmountInvested: number
   }[];
 }
