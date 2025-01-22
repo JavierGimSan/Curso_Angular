@@ -1,14 +1,15 @@
-<form>
+<form (ngSubmit)="onSubmit(titleInput.value, textInput.value)" #form>
   <app-control label="Title">
-    <input name="title" id="title" />
+    <input name="title" id="title" #titleInput #input />
+    <!--Con el hashtag creamos una variable de plantilla. El elemento en el que se añade la variable se guarda en esa misma variable.-->
   </app-control>
   <app-control label="Request">
-    <textarea name="request" id="request" rows="3"></textarea>
+    <textarea name="request" id="request" rows="3" #textInput #input></textarea>
   </app-control>
   <p>
-    <button appButton>
-        Submit
-        <span ngProjectAs="icon">⌲</span>
+    <button appButton #btn>
+      Submit
+      <span ngProjectAs="icon">⌲</span>
     </button>
   </p>
 </form>
