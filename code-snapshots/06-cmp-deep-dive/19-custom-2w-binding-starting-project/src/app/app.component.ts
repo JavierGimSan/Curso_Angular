@@ -9,8 +9,5 @@ import { FormsModule } from '@angular/forms';
   imports: [RectComponent, FormsModule],
 })
 export class AppComponent {
-  rectSize = {
-    width: '100',
-    height: '100',
-  };
+  rectSize = { width: '100', height: '100', };
 }
